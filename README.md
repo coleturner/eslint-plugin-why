@@ -1,6 +1,43 @@
 # eslint-plugin-why
 
-Enforces adding a comment before disabling an ESLint rule (WIP)
+Enforces adding a comment before disabling an ESLint rule.
+
+Trying to understand why someone ignored that lint rule? Need an explanation for what the heck is going on?
+Add eslint-plugin-why to your codebase and make contributors tell you why.
+
+# Installation
+
+Install the plugin
+
+```sh
+$ npm install eslint-plugin-why --save-dev
+```
+
+# Configuration
+
+Add the following preset to your ESLint configuration:
+
+```json
+  "extends": [
+    "plugin:why/error"
+  ]
+```
+
+But if you find it too aggressive, there's a preset that uses warnings instead of errors:
+
+```json
+  "extends": [
+    "plugin:why/warning"
+  ]
+```
+
+Or you can add the rule yourself:
+
+```json
+  "rules": {
+    "why/tell-me-why": "error"
+  }
+```
 
 ## Rule: why/tell-me-why
 
@@ -14,9 +51,9 @@ someCodeHere();
 
 ```js
 /*
-        eslint-why
-        some people just like to watch the world burn
-    */
+    eslint-why
+    some people just like to watch the world burn
+*/
 // eslint-disable-next-line semi
 someCodeHere();
 ```
@@ -42,3 +79,7 @@ console.log("I like turtles");
 // eslint-disable-next-line semi
 someCodeHere();
 ```
+
+## Contributors
+
+- [Cole Turner](https://github.com/coleturner)
