@@ -90,7 +90,7 @@ ruleTester.run("boolean-prop-naming", rule, {
       ],
       errors: [
         {
-          message: "Expected an eslint-why comment before eslint-disable..."
+          message: "Expected an eslint-why comment before eslint-disable"
         }
       ]
     },
@@ -110,7 +110,7 @@ ruleTester.run("boolean-prop-naming", rule, {
       errors: [
         {
           message:
-            "eslint-why comment must be no more than 1 lines before eslint-disable..."
+            "eslint-why comment must be no more than 1 lines before eslint-disable"
         }
       ]
     }

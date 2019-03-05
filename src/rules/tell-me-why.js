@@ -20,7 +20,7 @@ function tellMeWhy(context, comments, comment) {
   if (!commentValueName || commentValueName !== commentName) {
     return context.report({
       loc,
-      message: "Expected an eslint-why comment before eslint-disable..."
+      message: "Expected an eslint-why comment before eslint-disable"
     });
   }
 
@@ -28,7 +28,7 @@ function tellMeWhy(context, comments, comment) {
     return context.report({
       loc,
       message:
-        "eslint-why comment must be no more than {{maxLinesAway}} lines before eslint-disable...",
+        "eslint-why comment must be no more than {{maxLinesAway}} lines before eslint-disable",
       data: { maxLinesAway }
     });
   }
