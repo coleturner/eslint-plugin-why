@@ -1,14 +1,24 @@
-# eslint-why
+# eslint-plugin-why
+
 Enforces adding a comment before disabling an ESLint rule (WIP)
 
-## Rule: eslint-why
+## Rule: why/tell-me-why
 
 ### Good Examples
 
 ```js
 // eslint-why some people just like to watch the world burn
 // eslint-disable-next-line semi
-someCodeHere()
+someCodeHere();
+```
+
+```js
+/*
+        eslint-why
+        some people just like to watch the world burn
+    */
+// eslint-disable-next-line semi
+someCodeHere();
 ```
 
 ### Bad Examples
@@ -16,19 +26,19 @@ someCodeHere()
 No why comment:
 
 ```js
-someCodeHere()
+someCodeHere();
 
 // eslint-disable-next-line semi
-someCodeThere()
+someCodeThere();
 ```
 
-Why comment is too far away: 
+Why comment is too far away:
 
 ```js
 // eslint-why some people just like to watch the world burn
-console.log('I like turtles');
 
+console.log("I like turtles");
 
 // eslint-disable-next-line semi
-someCodeHere()
+someCodeHere();
 ```
