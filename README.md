@@ -3,7 +3,11 @@
 Enforces adding a comment before disabling an ESLint rule.
 
 Trying to understand why someone ignored that lint rule? Need an explanation for what the heck is going on?
-Add eslint-plugin-why to your codebase and make contributors tell you why.
+Add eslint-plugin-why to your codebase and make contributors tell you why:
+
+```
+error  Expected an eslint-why comment before eslint-disable  why/tell-me-why
+```
 
 # Installation
 
