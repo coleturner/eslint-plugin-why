@@ -48,7 +48,7 @@ Or you can add the rule yourself:
 ### Good Examples
 
 ```js
-// eslint-why some people just like to watch the world burn
+// eslint-why some people just want to watch the world burn
 // eslint-disable-next-line semi
 someCodeHere();
 ```
@@ -56,7 +56,7 @@ someCodeHere();
 ```js
 /*
     eslint-why
-    some people just like to watch the world burn
+    because I like unexpected surprises
 */
 // eslint-disable-next-line semi
 someCodeHere();
@@ -76,7 +76,7 @@ someCodeThere();
 Why comment is too far away:
 
 ```js
-// eslint-why some people just like to watch the world burn
+// eslint-why because testing in production is the only way we do
 
 console.log("I like turtles");
 
