@@ -2,7 +2,7 @@
 
 Enforces adding a comment before disabling an ESLint rule.
 
-![fun gif](https://media.giphy.com/media/MKCdpXNWYWycw/giphy.gif)
+![fun gif](./dont-open-this.gif)
 
 Trying to understand why someone ignored that lint rule? Need an explanation for what the heck is going on?
 Add eslint-plugin-why to your codebase and make contributors tell you why:
