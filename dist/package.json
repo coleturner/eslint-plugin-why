@@ -1,0 +1,21 @@
+{
+  "name": "eslint-plugin-why",
+  "version": "0.0.4",
+  "main": "index.js",
+  "repository": "https://github.com/coleturner/eslint-plugin-why.git",
+  "author": "Cole Turner <turner.cole@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha tests/lib/**/*.js tests/util/**/*.js tests/index.js",
+    "build": "rm -rf ./dist && mkdir ./dist && babel -D -d dist src package.json",
+    "prepublishOnly": "[[ \"$PWD\" =~ /dist ]] || echo 'Error: Must publish from ./dist'"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^8.2.6",
+    "eslint": "^3.0.0 || ^4.0.0 || ^5.0.0",
+    "mocha": "^5.2.0"
+  }
+}
