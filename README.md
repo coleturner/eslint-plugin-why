@@ -5,11 +5,14 @@ Enforces adding a comment before disabling an ESLint rule.
 ![fun gif](./dont-open-this.gif)
 
 Trying to understand why someone ignored that lint rule? Need an explanation for what the heck is going on?
-Add eslint-plugin-why to your codebase and make contributors tell you why:
 
-```
-error  Expected an eslint-why comment before eslint-disable  why/tell-me-why
-```
+**Add eslint-plugin-why to clear that up:**
+
+![demo](./demo.png)
+
+**So you don't have to ask why later:**
+
+![demo](./demo-fix.png)
 
 # Installation
 
