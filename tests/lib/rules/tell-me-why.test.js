@@ -113,6 +113,26 @@ ruleTester.run("boolean-prop-naming", rule, {
             "eslint-why comment must be no more than 1 lines before eslint-disable"
         }
       ]
+    },
+    {
+      // disabling a why comment, should require a why comment
+      code: `
+      // eslint-why I can disable the next line, but it shouldn't cascade
+      // eslint-disable-next-line why/tell-me-why
+      // eslint-disable-next-line semi
+      someCodeHere()
+    `,
+      options: [
+        {
+          maxLinesAway: 1
+        }
+      ],
+      errors: [
+        {
+          message: "Expected an eslint-why comment before eslint-disable",
+          line: 4
+        }
+      ]
     }
   ]
 });
