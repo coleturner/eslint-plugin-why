@@ -115,6 +115,44 @@ ruleTester.run("boolean-prop-naming", rule, {
       ]
     },
     {
+      // comment empty
+      code: `
+      // eslint-why
+      // eslint-disable-next-line semi
+      someCodeHere()
+    `,
+      options: [
+        {
+          maxLinesAway: 1
+        }
+      ],
+      errors: [
+        {
+          message: "eslint-why comment cannot be empty"
+        }
+      ]
+    },
+    {
+      // comment block empty
+      code: `
+      /*
+         eslint-why 
+      */
+      // eslint-disable-next-line semi
+      someCodeHere()
+    `,
+      options: [
+        {
+          maxLinesAway: 1
+        }
+      ],
+      errors: [
+        {
+          message: "eslint-why comment cannot be empty"
+        }
+      ]
+    },
+    {
       // disabling a why comment, should require a why comment
       code: `
       // eslint-why I can disable the next line, but it shouldn't cascade

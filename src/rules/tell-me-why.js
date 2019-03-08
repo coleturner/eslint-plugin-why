@@ -12,15 +12,32 @@ function tellMeWhy(context, comments, comment) {
   const commentIndex = comments.indexOf(comment);
   const previousComment = comments[commentIndex - 1];
 
-  const commentValueName =
+  const commentValue =
     previousComment &&
     previousComment.value &&
-    previousComment.value.replace(/^\s+/, "").substring(0, commentName.length);
+    previousComment.value.replace(/^\s+/, "").replace(/\s+$/, "");
+
+  const commentValueName =
+    commentValue && commentValue.substring(0, commentName.length);
+
+  const commentValueString =
+    commentValue &&
+    commentValue
+      .substring(commentName.length)
+      .replace(/^\s+/, "")
+      .replace(/\s+$/, "");
 
   if (!commentValueName || commentValueName !== commentName) {
     return context.report({
       loc,
       message: "Expected an eslint-why comment before eslint-disable"
+    });
+  }
+
+  if (!commentValueString || commentValueString === "") {
+    return context.report({
+      loc,
+      message: "eslint-why comment cannot be empty"
     });
   }
 
