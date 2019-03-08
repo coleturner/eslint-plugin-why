@@ -86,6 +86,22 @@ console.log("I like turtles");
 someCodeHere();
 ```
 
+Why comment is empty:
+
+```js
+// eslint-why
+// eslint-disable-next-line semi
+someCodeHere();
+```
+
+Savage attempt to disable the why rule:
+
+```js
+// eslint-disable-next-line why/tell-me-why
+// eslint-disable-next-line semi
+someCodeHere();
+```
+
 ## Contributors
 
 - [Cole Turner](https://github.com/coleturner)
