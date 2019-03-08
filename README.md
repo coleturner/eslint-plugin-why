@@ -2,11 +2,7 @@
 
 Enforces adding a comment before disabling an ESLint rule.
 
-![fun gif](./dont-open-this.gif)
-
-Trying to understand why someone ignored that lint rule? Need an explanation for what the heck is going on?
-
-**Add eslint-plugin-why to clear that up:**
+Trying to understand why someone ignored that lint rule? Need an explanation for what the heck is going on? **Add eslint-plugin-why.**
 
 ![demo](./demo.png)
 
@@ -49,6 +45,8 @@ Or you can add the rule yourself:
 ```
 
 ## Rule: why/tell-me-why
+
+![fun gif](./dont-open-this.gif)
 
 ### Good Examples
 
